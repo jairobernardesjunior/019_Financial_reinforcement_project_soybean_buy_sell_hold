@@ -1,7 +1,7 @@
 ## Projeto soybean compra venda mantem
 
 ### Problem:
-Grouping credit card holders is an essential practice for credit card companies. This strategy allows them to check which group, or cluster, the cardholder belongs to, and they may receive additional benefits when using the card, or be subject to certain restrictions depending on the group to which they belong.
+Grouping credit card holders is an essential practice for credit card companies. This strategy allows them to check which group, or cluster, the cardholder belongs to, and they may receive additional benefits when using the card, or be subject to certain restrictions depending on the group to which they belong..
 
 A decisão de comprar, vender ou manter títulos de soja é uma questão complexa que envolve uma série de fatores econômicos e de mercado. Para tomar decisões informadas, é essencial realizar uma análise de mercado, que inclui:
 Tendências históricas: Estudar o comportamento passado dos preços pode ajudar a prever movimentos futuros.
