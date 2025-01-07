@@ -54,8 +54,13 @@ Aprendizado Contínuo
 - A seguir está o Dicionário de Dados para o conjunto de dados cotação de título de soja:
 
     Date: data da ocorrência da cotação
+
     Open: valor cotado na abertura dos trabalhos de negociação
+
     High: valor máximo atingido no período de negociação
+
     Low:  valor mínimo atingido no período de negociação
+
     Volume: nro de contratos negociados no período de negociação
+    
     Open interest: fluxo de dinheiro para dentro ou para fora de um mercado de futuros
