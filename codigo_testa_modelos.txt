@@ -1,0 +1,86 @@
+print('teste antigo')
+
+'''
+
+states_sell_test = [] 
+states_buy_test = []
+total_profit = 0.0 
+test_data = X_test 
+
+def testa_modelos(test_data, window_size, model_name, nome_grafico):
+    global df_soy_action
+    #global test_data
+    l_test = len(test_data) - 1 
+    state = getState(test_data, 0, window_size + 1) 
+    global total_profit
+    is_eval = True 
+    done = False 
+    global states_sell_test
+    global states_buy_test
+    #model_name = model_name #'model_ep3.keras'
+    agent = Agent(window_size, is_eval, model_name) 
+    #state = getState(data, 0, window_size + 1) 
+    total_profit = 0.0 
+    agent.inventory = [] 
+
+    print('teste')
+
+    for t in range(l_test): 
+        action = agent.act(state) 
+        next_state = getState(test_data, t + 1, window_size + 1) 
+        reward = 0 
+
+        print('***** state', state)
+        print('***** action', action)
+
+        if action == 1:
+            agent.inventory.append(test_data[t]) 
+            states_buy_test.append(t) 
+            print('Buy (comprar): ' + formatPrice(test_data[t])) 
+            dfx = pd.DataFrame({"vr_fechamento":[data[t]],"vr_buy":[data[t]],"vr_sell":['Nan']})
+            #df_soy_action = pd.concat([df_soy_action, dfx], ignore_index=True)
+
+        elif action == 2 and len(agent.inventory) > 0: 
+            bought_price = agent.inventory.pop(0) 
+            reward = max(test_data[t] - bought_price, 0) 
+            total_profit += test_data[t] - bought_price
+            states_sell_test.append(t)
+            print('Sell (vender): ' + formatPrice(test_data[t]) + ' | profit (lucro): ' + formatPrice(test_data[t] - bought_price)) 
+            dfx = pd.DataFrame({"vr_fechamento":[data[t]],"vr_buy":['Nan'],"vr_sell":[data[t]]})
+            #df_soy_action = pd.concat([df_soy_action, dfx], ignore_index=True)       
+
+            print('Total do Lucro: ' + formatPrice(total_profit))
+
+        else:
+            #print('3 - Hold (manter): ' + formatPrice(test_data[t]))  
+            dfx = pd.DataFrame({"vr_fechamento":[data[t]],"vr_buy":['Nan'],"vr_sell":['Nan']})
+            #df_soy_action = pd.concat([df_soy_action, dfx], ignore_index=True)                   
+        
+        
+        if t == l_test - 1: 
+            done = True 
+            agent.memory.append((state, action, reward, next_state, done)) 
+            state = next_state 
+        
+
+        # ************************************************
+        done = True if t == l - 1 else False 
+        
+        # 4: Obter próximo estado a ser usado na equação de Bellman 
+        next_state = getState(test_data, t + 1, window_size + 1) 
+        
+        # 5: Acrescentar à memória 
+        agent.memory.append((state, action, reward, next_state, done)) 
+        state = next_state 
+
+        # ************************************************
+
+        if done: 
+            print('------------------------------------------')
+            print('Total do Lucro: ' + formatPrice(total_profit)) 
+            print('------------------------------------------')
+
+    # plotando o resultado do teste
+    plot_behavior(test_data, states_buy_test, states_sell_test, total_profit, 'Resultado do Teste', nome_grafico)
+
+'''
