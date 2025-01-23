@@ -1,5 +1,4 @@
-## Projeto soybean compra venda mantem
-
+## Projeto soybean buy sell hold
 ### Problem:
 The decision to buy, sell or hold soybean securities is a complex issue involving a number of economic and market factors. To make informed decisions, it is essential to conduct market analysis, which includes:
 Historical trends: Studying past price behavior can help predict future movements.
